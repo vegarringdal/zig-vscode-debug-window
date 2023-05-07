@@ -1,5 +1,15 @@
 const std = @import("std");
 
+pub fn addOne(num: i32) i32 {
+    return num + 1;
+}
+
 pub fn main() !void {
-    std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
+    var x = addOne(41);
+    std.debug.print("Number is {d} \n", .{x});
+}
+
+test "expect addOne adds one to 41" {
+    var x = addOne(41);
+    try std.testing.expect(x == 42);
 }

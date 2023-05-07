@@ -8,7 +8,16 @@
             "cwd": "${workspaceFolder}",
             "request": "launch",
             "program": "${workspaceFolder}/zig-out/bin/vscodedebug",
-            "preLaunchTask": "build zig",
+            "preLaunchTask": "build zigExe",
+        },
+        {
+            "name": "debug test",
+            "type": "cppvsdbg",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/test",
+            "preLaunchTask": "build zigTest",
         }
     ]
 }
